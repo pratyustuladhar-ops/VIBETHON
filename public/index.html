@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link Analytics Shortener</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Link Analytics Shortener</h1>
+    <div class="input-section">
+      <input type="text" id="url-input" placeholder="Enter a long URL" />
+      <button id="shorten-btn">Shorten</button>
+    </div>
+    <div id="message" class="message"></div>
+    <h2>Dashboard</h2>
+    <table id="links-table">
+      <thead>
+        <tr>
+          <th>Original URL</th>
+          <th>Short URL</th>
+          <th>Clicks</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
