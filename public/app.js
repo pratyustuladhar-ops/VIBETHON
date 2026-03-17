@@ -1,6 +1,6 @@
 // app.js - Frontend logic for Link Analytics Shortener
 
-const apiBase = '';
+const apiBase = 'https://vibethon-1.onrender.com';
 
 const urlInput = document.getElementById('url-input');
 const shortenBtn = document.getElementById('shorten-btn');

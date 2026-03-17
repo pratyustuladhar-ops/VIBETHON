@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 urlForm.addEventListener('submit', handleFormSubmit);
 copyBtn.addEventListener('click', () => copyToClipboard(shortUrlDisplay.value));
 
+// API Configuration
+const API_BASE = 'https://vibethon-1.onrender.com';
+
 // Form submission handler
 async function handleFormSubmit(e) {
     e.preventDefault();
@@ -46,7 +49,7 @@ async function handleFormSubmit(e) {
     shortenBtn.classList.add('loading');
 
     try {
-        const response = await fetch('/api/shorten', {
+        const response = await fetch(`${API_BASE}/api/shorten`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -79,7 +82,7 @@ async function handleFormSubmit(e) {
 // Fetch all URLs
 async function fetchUrls() {
     try {
-        const response = await fetch('/api/urls');
+        const response = await fetch(`${API_BASE}/api/urls`);
         const data = await response.json();
 
         urls = data;
@@ -157,7 +160,7 @@ async function deleteUrl(id) {
     }
 
     try {
-        const response = await fetch(`/api/urls/${id}`, {
+        const response = await fetch(`${API_BASE}/api/urls/${id}`, {
             method: 'DELETE'
         });
 
